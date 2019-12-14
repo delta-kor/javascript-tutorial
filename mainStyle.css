@@ -53,10 +53,19 @@ a::after {
     padding-top: 3em;
 }
 
+.tutorial.title.wrapper {
+    text-align: left;
+    width: 50vw;
+}
+
 .title.wrapper > .title {
     font-size: 49px;
     font-weight: lighter;
     margin: 0.5em 0;
+}
+
+.tutorial.title.wrapper > .title {
+    font-size: 39px;
 }
 
 .title.wrapper > .description {
@@ -111,7 +120,7 @@ a::after {
 }
 
 .content.wrapper {
-    width: 60vh;
+    width: 60vw;
     display: inline-block;
     text-align: left;
     margin-top: 3em;
@@ -179,4 +188,41 @@ a::after {
 .back.button::after {
     transition: none;
     border-top: none;
+}
+
+.article.wrapper {
+    text-align: left;
+    display: inline-block;
+    width: 50vw;
+    margin-top: 1em;
+}
+
+.article.wrapper > p {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 1em 0;
+}
+
+.article.wrapper > h1 {
+    font-size: 2.3em;
+    color: #745fb5;
+    margin: 1.3em 0;
+}
+
+.article.wrapper > h2 {
+    font-size: 2em;
+    color: #745fb5;
+    margin: 1.3em 0;
+}
+
+.article.wrapper > h3 {
+    font-size: 1.7em;
+    color: #745fb5;
+    margin: 1.3em 0;
+}
+
+.article.wrapper > h4 {
+    font-size: 1.5em;
+    color: #745fb5;
+    margin: 1.3em 0;
 }
