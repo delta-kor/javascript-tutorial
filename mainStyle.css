@@ -54,8 +54,16 @@ a::after {
 }
 
 .tutorial.title.wrapper {
+    background-color: #f1f3f5;
+    position: sticky;
+    top: -55px;
     text-align: left;
     width: 50vw;
+    z-index: 3;
+}
+
+.tutorial.title.wrapper.sticked {
+    box-sizing: border-box;
 }
 
 .title.wrapper > .title {
@@ -66,6 +74,17 @@ a::after {
 
 .tutorial.title.wrapper > .title {
     font-size: 39px;
+    margin-top: 0.7em;
+    text-align: center;
+    transition: 300ms ease;
+    width: 0;
+    white-space: nowrap;
+}
+
+.tutorial.title.wrapper.sticked > .title {
+    font-size: 30px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .title.wrapper > .description {
@@ -154,8 +173,8 @@ a::after {
     display: inline-block;
     border-radius: 50%;
     transition: all 100ms linear;
-    position: absolute;
-    top: 15px;
+    position: fixed;
+    top: 10px;
     left: 15px;
 }
 
@@ -225,4 +244,49 @@ a::after {
     font-size: 1.5em;
     color: #745fb5;
     margin: 1.3em 0;
+}
+
+.article.wrapper > div {
+    width: 100%;
+    border: 3px solid rgba(102,119,136,.2);
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 5px 1em;
+    margin: 2em 0;
+}
+
+.article.wrapper > div > .title {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.article.wrapper > .eval-code {
+    background-color: #745fb5;
+    border: none;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    border-radius: 100%;
+    float: right;
+}
+
+.article.wrapper > .eval-code:hover {
+    background-color: #5f4aa1;
+}
+
+.svg-icon {
+    margin: 4px 0 0 -1px;
+    width: 20px;
+    height: 20px;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+    fill: #fff;
+}
+
+.svg-icon circle {
+    stroke: #fff;
+    stroke-width: 1;
 }
