@@ -10,14 +10,16 @@ body {
     background-color: #f1f3f5;
 }
 
+.wrapper {
+    text-align: center;
+}
+
 .page.wrapper {
     padding: 2em;
-    text-align: center;
 }
 
 .title.wrapper {
     display: inline-block;
-    text-align: center;
     width: 60vw;
     padding-top: 3em;
 }
@@ -32,4 +34,49 @@ body {
     font-size: 14px;
     letter-spacing: 3px;
     color: #678;
+}
+
+.quickMenu.wrapper {
+    margin-top: 3em;
+    width: 60vw;
+    display: inline-block;
+}
+
+.quickMenu.wrapper > .row {
+    display: inline-grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 8px;
+    width: 100%;
+}
+
+.quickMenu.wrapper > .row > .item {
+    background-color: #6f8793;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.9em;
+    letter-spacing: 5px;
+    text-align: left;
+    padding: 0.3em 0 0.3em 2em;
+    cursor: pointer;
+    user-select: none;
+}
+
+.quickMenu.wrapper > .row > .item:hover {
+    background-color: #678;
+}
+
+.quickMenu.wrapper > .row > .green.item {
+    background-color: #15b89a;
+}
+
+.quickMenu.wrapper > .row > .green.item:hover {
+    background-color: #14af83;
+}
+
+.quickMenu.wrapper > .row > .purple.item {
+    background-color: #745fb5;
+}
+
+.quickMenu.wrapper > .row > .purple.item:hover {
+    background-color: #5f4aa1;
 }
