@@ -10,14 +10,33 @@ body {
     background-color: #f1f3f5;
 }
 
-a:link, a:visited {
+a {
     color: #15b89a;
     text-decoration: none;
+    position: relative;
+    transition: color 500ms ease-out;
 }
 
 a:hover, a:active {
     color: #14af83;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+a:hover::after {
+    border-color: #14af83;
+    right: 0;
+}
+
+a::after {
+    border-radius: 10px;
+    border-top: .1em solid #15b89a;
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: 3px;
+    left: 0;
+    transition: right 500ms cubic-bezier(0, .5, 0, 1),
+                border-color 500ms ease-out;
 }
 
 .wrapper {
@@ -101,7 +120,7 @@ a:hover, a:active {
 }
 
 .content.wrapper .content {
-    padding: 10px 1em;
+    padding: 10px 2em;
     list-style: none;
     position: relative;
 }
@@ -111,6 +130,6 @@ a:hover, a:active {
     counter-increment: item;
     color: #959595;
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 0;
 }
