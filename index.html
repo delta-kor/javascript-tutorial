@@ -18,8 +18,8 @@
         <section class="quickMenu wrapper">
             <div class="row">
                 <div class="green item">
-                <p class="title">기초</p>
-            </div>
+                    <p class="title">기초</p>
+                </div>
                 <div class="green item">
                     <p class="title">자료형</p>
                 </div>
@@ -44,5 +44,33 @@
             </div>
         </section>
     </section>
+    <script>
+        let $ = {
+            value: {
+                quickMenu:  [
+                    {
+                        key: "기초",
+                        href: "basic"
+                    }
+                ]
+            }
+        };
+
+        window.onload = function () {
+            let items = document.getElementsByClassName("item");
+            for(let item of items) {
+                item.addEventListener("click",function(q) {
+                    let textContent = q.target.textContent.trim();
+                    for(let set of $.value.quickMenu) {
+                        if(set.key === textContent) {
+                            location.href = "./tutorials/"+set.href;
+                        } else {
+                            alert("아직 완성되지 않은 튜토리얼입니다.")
+                        }
+                    }
+                })
+            }
+        }
+    </script>
 </body>
 </html>

@@ -10,6 +10,16 @@ body {
     background-color: #f1f3f5;
 }
 
+a:link, a:visited {
+    color: #15b89a;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #14af83;
+    text-decoration: underline;
+}
+
 .wrapper {
     text-align: center;
 }
@@ -79,4 +89,28 @@ body {
 
 .quickMenu.wrapper > .row > .purple.item:hover {
     background-color: #5f4aa1;
+}
+
+.content.wrapper {
+    width: 60vh;
+    display: inline-block;
+    text-align: left;
+    margin-top: 3em;
+    counter-reset: item;
+    font-size: 1.2em;
+}
+
+.content.wrapper .content {
+    padding: 10px 1em;
+    list-style: none;
+    position: relative;
+}
+
+.content.wrapper .content::before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: #959595;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
